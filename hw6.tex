@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{fontawesome5}
+\usepackage{marvosym}
+\usepackage{ucs}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\title{6 домашняя работа по \TeX’у}
+\author{Михаил Ушаков 7мат класс}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\vspace{11cm}
+\section{Simple enumerate}
+
+\begin{enumerate}
+	\item Introduction
+	\item Examples of basic lists
+	\begin{itemize}
+    	\item[(a)]The itemize environment for bulleted (unordered) lists
+    	\item[(b)]The enumerate environment for numbered (ordered) lists
+    	\item[(c)]The description environment
+	\end{itemize}
+	\item Changing the label of individual entries
+	\item Nested lists
+	\begin{itemize}
+    	\item[(a)]Nested lists: label style
+    	\begin{itemize}
+        	\item[i.]Nested enumerate lists: number format
+        	\item[ii.]Nested enumerate lists: number format
+    	\end{itemize}
+	\end{itemize}
+	\item Customizing lists
+	\begin{itemize}
+    	\item[(a)]Customizing lists: changing labels
+    	\begin{itemize}
+        	\item[i.]Standard label-generation commands
+        	\item[ii.]Counter variables for enumerate
+        	\item[iii.]Examples: customizing labels of enumerate lists
+        	\begin{itemize}
+            	\item[A.]Practical example
+            	\item[B.]Printing counter variables
+            	\item[C.]Non-practical (fun) example
+        	\end{itemize}
+    	\end{itemize}
+    	\item[(b)]Customizing lists: changing the layout
+    	\begin{itemize}
+        	\item[i.]LaTeX list parameters
+        	\item[ii.]Creating a custom list using the list environment
+    	\end{itemize}
+    	\item[(c)]Using the enumitem package to modify and create lists
+    	\begin{itemize}
+        	\item[i.]enumitem package option shortlabels
+        	\item[ii.]Modifying a standard list
+        	\item[iii.]Creating a new list with enumitem
+        	\item []A. Using o configure a custom list created withenumitem
+        	\item[iv.]Lists for lawyers: nesting lists to an arbitrary depth
+        	\item[v.]Custom bullets using the enumitem package and MetaPost
+        	\item[Example 1:]auto-sizing bullet points
+        	\item[Example 2:]funky custom bullets
+    	\end{itemize}
+	\end{itemize}
+	\item Other features of the enumitem package
+\end{enumerate}
+
+\section{Advanced itemize}
+
+\begin{itemize}
+	\item First level item
+	\item First level item
+	\begin{itemize}
+    	\item Second level item
+    	\item Second level item
+    	\begin{itemize}
+        	\item Third level item
+        	\item Third level item
+        	\begin{itemize}
+            	\item Fourth level item
+            	\item Fourth level item
+        	\end{itemize}
+    	\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\begin{center}\noindent\rule{13cm}{0.4pt}\end{center}
+
+
+\renewcommand{\theenumi}{\Roman{enumi}}
+\begin{enumerate}
+	\item Useless symbols
+	\begin{itemize}
+    	\item[\Mundus] $\backslash$ Mundus
+    	\item[\Bat] $\backslash$ Bat
+    	\item[\faGhost] $\backslash$ faGhost
+	\end{itemize}
+    
+	\item Telephone\\
+	\begin{itemize}
+    	\item[\phone] $\backslash$ phone
+    	\item[\faMobile*] $\backslash$ Mobilephone (faMobile* )
+    	\begin{itemize}
+        	\item[\faApple] $\backslash$ faApple
+        	\item[\faAndroid] $\backslash$ faAndroid
+    	\end{itemize}
+	\end{itemize}
+    
+	\item Some useful commands\\
+	\begin{itemize}
+    	\item[\faTelegram] $\backslash$ faTelegram
+    	\item[\faGithub] $\backslash$ faGithub
+    	\item[\faGoogleDrive] $\backslash$ faGoogleDrive
+	\end{itemize}
+\end{enumerate}
+
+\end{document}

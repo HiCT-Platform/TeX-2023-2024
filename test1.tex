@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\title{Контрольная работа по \LaTeX'у}
+\author{Миша Ушаков / Ваня Веряскин / Егор Волков}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Таблицы}
+AAA
+\section{задача}
+\[\int^1_0 (1-x^2)^n dx\]
+\[\begin{array}{c}
+     AAA \\
+     AAA \\
+     
+\end{array}
+\end{ara}
+\end{ara}\]
+
+
+\section{Определние}
+Образом множества S называеться $F(S) = \{b~\in~B~|~\exists~ a~\in~S~b~\in~F(a)~\}$.
+Прообразом множества $T$ Называеться $F^{-1}(t)~=~\{a~\in~A~|~F(a)~\bigcap~T~\neq~\varnothing~\}$
+\section{Теорема}
+\[F(S\bigcap T) = F(S) \bigcap F(T) \Longleftrightarrow F инъективно.\]
+
+
+
+\textit{Доказательство:}
+
+Если $F$ не инъективно,то существуют $a_1,a_2$, такие что $F(a_1)~\bigcap~F(a_2)~\neq~\varnothing~$. Положим $S=\{a_1~\}, T=\{a_2~\}$.
+
+Если $F$ инъекция, то $b~\in~F(S~\bigcap~T) \implies \exists a\in S\bigcap T: b \in F(a)$. Но $a \in S \bigcap T$ озночает, что $a \in S, a \in T$, а значит $b \in F(S), b \in F(T) \implies b \in F(S) \bigcap F(T).$
+
+С другой стороны, пусть $b \in F(S) \bigcap F(T).$ Тогда $\exists a_1 \in S: b \in F(a_1), \exists a_2 \in T: b \in F(a_2)$. По определению инъективного соответствия это значит,что $a_1 = a_2 = a \in S \bigcap T \implies b \in F(S \bigcap T)$.
+\end{document}
