@@ -1,6 +1,6 @@
 # MikaUV fork
 
-MikaUV fork, for _Home Work_
+MikaUV fork, for my _Home Work_
 
 ### startUp
 
