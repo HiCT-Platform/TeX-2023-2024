@@ -11,3 +11,6 @@
 # TeXiFy IDEA
 out
 auxil
+
+# Solutions
+!hw*/*.pdf
