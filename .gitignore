@@ -1,0 +1,16 @@
+# TeX output
+*.aux
+*.log
+*.dvi
+*.pdf
+
+# IDEA
+.idea
+*.iml
+
+# TeXiFy IDEA
+out
+auxil
+
+# Solutions
+!hw*/*.pdf
