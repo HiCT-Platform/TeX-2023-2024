@@ -1,0 +1,20 @@
+\section{Неравенство Йенсена}
+\textbf{Theorem 1.1} (Неравенства Йенсена). \emph{Пусть f(x) выпукла вверх на [a, b]. Тогда $\forall{x_{1}}, \ldots, x_{n} \in [a, b]$ и их выпуклой комбинации выполнено неравенство   $\sum^{n}_{k=1} \alpha_{k}f(x_{k}) \leqslant  f(\sum^{n}_{k=1} \alpha_{k} x_{k})$} \\ \\
+\emph{Доказательство.}(Докажем по индукции) \\ \\
+\textbf{База:}  \emph{n} = 2
+\parindent=10mm
+
+Неравентство превращается в определение выпуклой вверх функции, для которой это, очевидно, 
+
+выполняется. \\
+\textbf{Переход:} Пусть это верно для \emph{n}. Докажем, что это верно для \emph{n} + 1 :
+\[ \sum^{n+1}_{k=1} \alpha_{k} = 1, \text{обозначим за} s_{n} = \sum^{n}_{k=1} \alpha_{k} \]
+
+Пусть $\beta_{k} = \dfrac{\alpha_{k}}{s_{n}}.$ Тогда получаем: $\sum^{n}_{k=1} \beta_{k}=1.$
+
+\[\sum^{n+1}_{k=1} \alpha_{k}f(x_{k}) = s_{n} \sum^{n}_{k=1} \beta_{k}f(x_{k}) + \alpha_{n+1}f(x_{n+1}) \leqslant \hspace{65mm} \]
+\[\hspace{15mm}\leqslant \text{(по предположению индукции)} s_{n}f\Bigg(\sum^{n}_{k=1} \beta_{k}x_{k}\Bigg) + \alpha_{n+1}f(x_{n+1}) \leqslant\]
+\[\hspace{105mm}\leqslant \text{(так как}s_{n} + \alpha_{n+1} = 1) f\Bigg(\sum^{n+1}_{k=1} \alpha_{k}x_{k}\Bigg)\]
+
+Значит, шаг индукции проделан, неравенство доказано для произвольного n.
+
