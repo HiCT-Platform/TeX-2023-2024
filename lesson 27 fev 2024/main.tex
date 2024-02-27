@@ -15,7 +15,7 @@
     \item[$\equiv$] Типо квадратики...
 \end{itemize}
     
-\begin{figure}[t]
+\begin{figure}[ht!]
 \begin{multicols}{2}
 \hfill
 \includegraphics[width=7cm]{picture.jpg}
@@ -23,11 +23,20 @@
 \caption{Птички}
 \label{figLeft}
 \hfill
-\includegraphics[width=7cm]{picture.jpg}
+\begin{asy}
+size(5cm);
+path thebox = box((0,0),(1,1));
+fill(thebox, blue);
+draw(shift(.5,.5)*thebox,green+linewidth(5pt));
+clip(thebox);
+draw(shift(-.5,-.5)*thebox,red+linewidth(5pt));
+\end{asy}
 \hfill
 \caption{Типо квадратики...}
 \label{figRight}
 \end{multicols}
 \end{figure}
+
+
 
 \end{document}
