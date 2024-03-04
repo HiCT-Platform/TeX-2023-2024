@@ -12,7 +12,7 @@
 \begin{itemize}
     \item[] \!\!\!\!\!\!\!\!Картинки
     \item[$\equiv$] Птички
-    \item[$\equiv$] Типо квадратики...
+    \item[$\equiv$] Квадратики
 \end{itemize}
     
 \begin{figure}[ht!]
@@ -25,18 +25,17 @@
 \hfill
 \begin{asy}
 size(5cm);
-path thebox = box((0,0),(1,1));
-fill(thebox, blue);
-draw(shift(.5,.5)*thebox,green+linewidth(5pt));
-clip(thebox);
-draw(shift(-.5,-.5)*thebox,red+linewidth(5pt));
+path thebox = box((0,0),(1,-1));
+fill(thebox, green);
+draw(shift(0,0)*thebox,red+linewidth(5pt));
+draw(shift(-.5,.5)*thebox,red+linewidth(5pt));
+path thebox1 = box((0, 0), (.5, -.5));
+fill(thebox1, blue);
 \end{asy}
 \hfill
-\caption{Типо квадратики...}
+\caption{Квадратики}
 \label{figRight}
 \end{multicols}
 \end{figure}
-
-
 
 \end{document}
