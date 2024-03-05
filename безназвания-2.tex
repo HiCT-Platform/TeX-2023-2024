@@ -1,0 +1,42 @@
+\documentclass{report}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+\usepackage[14pt]{extsizes}
+\usepackage{graphicx} 
+\usepackage{asymptote}
+\geometry{
+	left=20mm,
+	right=15mm,
+	top=25mm,
+	bottom=30mm
+}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{imports}
+
+\begin{document}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[scale=0.5]{bird.jpg}\caption{Птичка}\label{figure1}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{
+\begin{asy}
+unitsize(1.5cm);
+path thebox = box((0,0),(1,1));
+fill(thebox, white);
+draw(shift(9.2,9.2)*thebox,green+linewidth(3pt));
+clip(thebox);
+path f=(0.5,-0.5)--(1.5,-0.5)--(1.5,0.5)--(0.5,0.5)--cycle;
+filldraw(f,fillpen=green, drawpen=linewidth(1mm)+.99red);
+path g=(0.5,0)--(1,0)--(1,0.5)--(0.5,0.5)--cycle;
+filldraw(g,fillpen=blue, drawpen=linewidth(1mm)+.99red);
+draw(shift(0,0)*thebox,red+linewidth(3pt));
+draw(scale(.75)*Label(
+"$\phi$",align=3.5*RightSide, position=Relative(2.75)), g,red);
+\end{asy}
+}
+\end{minipage}
+\end{figure}
+\end{document}
