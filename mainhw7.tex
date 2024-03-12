@@ -1,0 +1,21 @@
+\documentclass{article}
+\input{usepackageshw7.tex}
+\title{\bfseries Домашняя работа \textnumero 7 по курсу \TeX'а}
+\author{ФИО}
+\date{\today}
+\begin{document}
+	\maketitle
+	\input{taskhw7.tex}	
+	\section{Круги Эйлера}
+\begin{tikzpicture}
+	\node [circle,
+	fill=red!50,
+	minimum size =3cm,
+	label={135:$A$}] (A) at (0,0){};
+	\node [circle,
+	fill=red!50,
+	minimum size =3cm,
+	label={45:$B$}] (B) at (1.8,0){};
+	\node[orange!90!black] at (0.9,1.8) {($A\cup B$)$\setminus$ (A $\cap$ C)};
+\end{tikzpicture}
+\end{document}
