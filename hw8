@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\fi
+
+\usepackage{enumitem}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\geometry{
+	left=20mm,
+	right=15mm,
+	top=25mm,
+	bottom=30mm
+}
+
+\begin{document}
+	\thispagestyle{empty}
+	\fontsize{14}{16}\selectfont
+	\begin{center}
+		\textbf{Домашняя работа №8 по курсу \TeX'a}
+	\end{center}
+	\hspace{20px}
+	\begin{center}
+		Морозов Данила Егорович
+	\end{center}
+	\hspace{20px}
+	\begin{center}
+		27 февраля 2024 г.
+	\end{center}
+	\hspace{100px}
+	
+	 \begin{figure}[h!]
+		\centering
+		\includegraphics[width=\linewidth]{ptichka.jpg}
+		\caption{Птичка}
+	\end{figure}
+	
+\end{document}
