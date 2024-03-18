@@ -1,0 +1,66 @@
+%%%
+%%%    Provided by Alex Sin
+%%%    22 february 2024
+%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{imports}[2024/02/22 Package to be used as a project template imports' list]
+
+
+%%% Languages --------------------
+\RequirePackage{cmap}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[russian]{babel}
+%%% ------------------------------
+
+
+%%% Maths ------------------------
+\RequirePackage{amsmath, amsfonts, amssymb, amsthm, dsfont}
+\newtheorem{theorem}{Theorem}[section]
+%%% ------------------------------
+
+
+%%% Highlighting -----------------
+\RequirePackage{xcolor}
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=red,
+    citecolor=green,
+    pdfstartview=FitH
+}
+%%% ------------------------------
+
+
+%%% Other ------------------------
+\RequirePackage{enumitem}
+\setlist{noitemsep}
+
+\RequirePackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+}
+
+\RequirePackage{indentfirst}
+\linespread{1.25}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{15pt}
+
+\RequirePackage{comment}
+%%% ------------------------------
+
+%%% Graphic ------------------------
+
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\usepackage{asymptote}
+
+% The end

@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\begin{document}
+Пусть $\{X_{\alpha}\}\_\alpha\inA$ - семейство множеств, $Y$ - множество. Тогда:
+\[ Y \setminus \bigcup_{\alpha\in A} X_{\alpha} = \bigcap_{\alpha\in A}(Y\setminus X_{\alpha})\]
+\[ Y \setminus \bigcap_{\alpha\in A} X_{\alpha} = \bigcup_{\alpha\in A}(Y\setminus X_{\alpha})\]
+Доказательство:
+$\forall A = X_{\alpha_1}\& B = X _ {\alpha _ 2}$:
+$x \in Y \setminus (A \cup B) \Rightarrow x \notin A \cup B \Rightarrow x \notin A \& x \notin B \Rightarrow x \in Y \setminus A \& x \in Y \setminus B \Rightarrow x \in (Y\setminus A) \cap (Y \setminus B) \Rightarrow Y\setminus \cup_{\alpha \in A} = \cap_{\alpha \in A}(Y \setminus X_a)$
+
+Предел последовательности
+${lim}_{x\rightarrow x_0} \fint(x)=A \Leftrightarrow \forall \epsilon > 0~\exists~\delta~\forall x: 0<|x-x_0|<\delta \Rightarrow |\fint (x) - A| < \epsilon$
+
+\end{document}
+
+

@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{imports}
+
+\title{\bfseries работа на паре \TeX'а}
+\author{Михаил Ушаков 7 мат}
+\date{12 марта 2024 г.}
+
+\begin{document}
+\maketitle
+
+\makeatletter
+
+\newcommand{\newset}[2][@]{
+\if#1@                                 % check optinial
+\newcommand{\R}{$\mathbf{#2}$}         % first
+\newcommand{\Rzvezda}{$\mathfrak{#2}$} % second
+%havent optinal
+
+\else
+\newcommand{\complx}{#1}
+%Have optinal
+
+\fi}
+\makeatother
+
+\newset{R}
+\R
+\Rzvezda
+
+\newset[$\mathbf{C}$]{complx}
+\complx
+
+\end{document}

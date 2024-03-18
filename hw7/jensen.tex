@@ -1,0 +1,20 @@
+\section{Неравенство Йенсена}
+\noindent\textbf{Theorem 1.1} (Неравенство Йенсена). \textit{Пусть} $ f(x) $ \textit{выпукла ввурх} [a, b]. \textit{Тогда} $\forall x_1 ..., x_n \in [a, b]$ \textit{и их выпуклой комбинации выполнено неравенство} $ \sum^n_{k=1} \alpha_kf(x_k) \leqslant f ( \sum^k_{k=1} \alpha_kx_k)$
+
+\noindent\textit{Доказательство}. (Докажем по индукции)
+
+\noindent\textbf{База:} n = 2\\
+\indentНеравенство превращается в определение выпуклой вверх, для которой это, очевидно, выполняется.
+\textbf{Переход:} Пусть это верно для $n$. Докажем, что это верно для $ n+1 $:
+
+$ \sum^{n+1}_{k=1} \alpha_k = 1$, обозначим за $\textit{s}_n = \sum^n_{k=1}\alpha_k $
+
+Пусть $ \beta_k = \cfrac{\alpha_k}{s_n}$. Тогда получаем: $ \sum^n_{k=1} \beta = 1 $.
+
+\noindent$\sum^{n+1}_{k+1}\alpha_kf(x_k) = s_n\sum^n_{k=1}\beta_kf(x_k)+\alpha_{n+1}f(x_{n+1}) \leqslant$\\
+$\leqslant$ (по предположению индукции) $s_n f(\sum^n_{k=1} \beta_kx_k) + \alpha_(n+1)f(x_{n+1}) \leqslant$\\
+$\leqslant$(так как $s_n + \alpha_{n+1} = 1$) $ f(\sum^{n+1}_{k=1}\alpha_kx_k) $
+\noindentЗначит, шаг индукции проделан, неравенство доказано для произвольного n.\\
+\begin{flushright}$\square$\end{flushright}
+
+\endinput

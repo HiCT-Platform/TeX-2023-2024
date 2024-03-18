@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{ucs}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\begin{document}
+\[\begin{array}{||c||}
+	\hline \hline
+ 	\begin{array}{c|c}
+      	(1 & 2)
+ 	\end{array}
+ 	\begin{pmatrix}
+    	1 ~\vline~ 2 \\
+    	3 ~\vline~  4
+ 	\end{pmatrix}
+ 	\begin{pmatrix}
+    	1 ~\vline~\vline~ 2 \\
+    	3 ~\vline~\vline~  4
+ 	\end{pmatrix} \\\\
+ 	\begin{pmatrix}
+    	1 \\
+    	2
+ 	\end{pmatrix}~\vline~\vline~\vline~
+ 	\begin{pmatrix}
+    	1 + \begin{array}{c}
+         	1  \\\hline
+         	2
+    	\end{array} \cdot 2 \cdot 2 \\ \hline
+    	\begin{array}{c}
+         	3  \\\hline
+         	4
+    	\end{array} + 1 \cdot 3 \cdot 3
+ 	\end{pmatrix}
+	\begin{array}{c|c}
+    	1 & 2 \\\hline
+    	3 & 4
+	\end{array}
+	\begin{bmatrix}
+    	\begin{array}{@{\cdot}c@{\cdot}c@{\cdot}c@{\cdot}}
+         	~1 ~&~ 2 ~&~ 3~ \\
+         	~ <0 ~&~ <> ~&~ 0>~ \\
+         	~ 4 ~&~ 5 ~&~ 6~ \\
+         	~ <0 ~&~ <\hspace{-0.25cm}> ~&~ 0>~ \\
+         	~ 7 ~&~ 8 ~&~ 9~ \\
+    	\end{array}
+	\end{bmatrix}
+ 	\\ \hline\\
+ 	M = \begin{Bmatrix}
+     	\begin{array}{c}
+          	x  \\\hline
+          	2
+     	\end{array}
+ 	\end{Bmatrix}~\vline~ x \in X\\\\ \hline \\
+ 	\begin{vmatrix}
+     	\llbracket
+     	\lfloor
+     	\langle
+     	\begin{pmatrix}
+         	\begin{array}{c}
+              	1 + \begin{array}{c}
+                   	1  \\\hline
+                   	2
+              	\end{array}  \\\hline
+              	\begin{array}{c}
+                   	\begin{array}{c}
+                        	3  \\\hline
+                        	4
+                   	\end{array} + 1 \\
+                   	\smiley
+              	\end{array}
+         	\end{array}
+     	\end{pmatrix}
+     	\rangle
+     	\rceil
+     	\rrbracket
+ 	\end{vmatrix} \\\\\hline\hline
+\end{array}\]
+
+\end{document}
+
