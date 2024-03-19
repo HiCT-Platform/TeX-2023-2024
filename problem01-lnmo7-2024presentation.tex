@@ -1,0 +1,219 @@
+\documentclass[10pt,pdf,ignorenonframetext]{beamer}
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{cmap}
+\usefonttheme[onlymath]{serif}% человеческие математические формулы
+% отключить клавиши навигации
+\setbeamertemplate{navigation symbols}{}
+% тема оформления
+\usetheme{madrid}
+\setbeamercovered{transparent}
+% цветовая схема
+%\usecolortheme{orchid}
+
+\title{Задача \textnumero1. Числа, цифры и делимость}
+%\subtitle{Use beamer everywhere you are}
+\author{Букин Тимофей}
+\institute[ЛНМО]{ЛНМО-7}
+
+\uselanguage{russian}
+\languagepath{russian}
+\deftranslation[to=russian]{Theorem}{Теорема}
+\deftranslation[to=russian]{Lemma}{Лемма}
+\deftranslation[to=russian]{Corollary}{Следствие}
+\deftranslation[to=russian]{Definition}{Определение}
+\deftranslation[to=russian]{Example}{Пример}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+\setbeamertemplate{theorems}[ams style]
+%выравнивание по ширине +перенос слов заработал!!!
+\usepackage{ragged2e}
+\justifying
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\gr}[1]{\textcolor{green}{#1}}
+\newcommand{\yl}[1]{\textcolor{orange}{#1}}
+\newcommand{\mg}[1]{\textcolor{magenta}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+
+
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{trm}{Теорема}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 1.}
+
+\begin{block}{условие}На доске написано число 202. Какую цифру надо приписать в конце, чтобы полученное число делилось на а)~8, б)~11, в)~23?
+\end{block}
+
+\textit{Ответ:} 4.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 2.}
+\begin{block}{условие}
+На доске написано число $X$, которое состоит из $n$ цифр. При каких $n$ всегда к числу можно приписать одну цифру в конце, чтобы полученное число делилось на а)~8, б)~11, в)~23?
+\end{block}
+
+\textit{Ответ:} а)~$n\in\mathbb{N}$, б)~$n=1$, в)~$n\in\varnothing$.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 3.}
+\begin{block}{условие}
+На доске написано трёхзначное число  $X$. Всегда ли к числу можно приписать одну цифру в конце и одну цифру в начале, чтобы полученное пятизначное число делилось на а)~72, б)~44, в)~23.
+\end{block}
+
+\textit{Ответ:} а)~всегда, б)~всегда, в)~всегда.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 3. Опечатки}
+\mg{Вместо} 
+
+<<Для 0~~9 и 4; для 1~~ 9 и 3; для 2~~ 9 и 2;  для 3~~ 9 и 1;  для 4~~ 9 и 0;>>
+
+$90000\equiv_{23}19$.
+
+\mg{Надо}
+
+<<Для 0~~1 и 5; для 1~~ 1 и 4; для 2~~ 1 и 3;  для 3~~ 1 и 2;  для 4~~ 1 и 1;>> 
+$90000\equiv_{23}1$.
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Пункт 4.а)}
+\begin{block}{условие}
+На доске написано трёхзначное число $X$. а) В этом числе можно приписать одну цифру между первой и второй цифрой или одну цифру между второй и третьей, а также одну цифру в начале и одну цифру конце. Верно ли, что для любого $X$ таким образом можно получить шестизначное число, которое делиться на 2024?
+\end{block}
+
+\textit{Ответ:} нет. Для 2024 контрпример: 101.
+
+Для 1012 контрпример: 171.
+
+Для 506 контрпример: 171.
+
+Для 253 контрпримера нет.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 4.а)}
+\begin{alertblock}{Большая опечатка}
+Стр. 3., пункт 4.в) подпункт а) вставлен вывод не той программы. \pause
+
+Но у нас есть программа, которая работает как надо.
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}\frametitle{Пункт 4.б)}
+\begin{block}{условие}
+На доске написано трёхзначное число $X$. б) А если в отличие от пункта а) можно вставить одну цифру между первой и второй, еще одну между второй и третьей и еще по одной добавить в начало и в конец, верно ли тогда, что для любого $X$ полученное семизначное число будет делиться на 2024?
+\end{block}
+
+\textit{Ответ:} нет. Для 2024 контрпример: 291.
+
+Для 1012 контрпримера нет. \pause 
+
+В этот раз вставили вывод нужной программы. :)
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 5.}
+\begin{block}{условие}
+На доске написано трёхзначное число $X$ и некоторое натуральное число $t$. Известно, что если к числу $X$ приписать любую цифру в конце и любую цифру в начале, то полу\-чен\-ное пятизначное число не будет делиться на число $t$.
+
+а)\footnote{\textcolor{red}{В данном пункте опечатка: вместо <<$r$~--- остаток от деления $X\cdot10$>> должно было быть <<$r$~--- остаток от деления $X$>>.\\ {\tiny К сожалению, не только в 5.а)}}} Найдите, все возможные значения для $t$ меньше 50, для которых выполняется это условие.
+
+б) Найдите наименьшее простое такое $t$, для которого выполняется это условие.
+\end{block}
+
+\textit{Ответ:} а) 16, 20, 25, 32, 33, 40, 48, 49, 50.
+
+\hspace{1cm} б) 53.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 5.}
+\begin{description}
+\item[конртрприм.:] 16, 20, 25, 32, 33, 40, 48, 49, 50.
+\item[рассуждения] 44, 30, 35, 45; \textcolor{blue}{2, 3, 5, 7, 11, 13, 17}.
+\item[перебор:] 26, 27, 28, 34, 38, 39, 42, 46; \textcolor{blue}{29, 31, 37, 41, 43, 47.}
+\item[делители:] 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36 [72]; 11, 22 [44]; 10, 15 [30];\\ 14, 21 [42]; \textcolor{blue}{19} [38], \textcolor{blue}{23} [46].
+\end{description}
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.}
+\begin{block}{условие}
+Для каких простых чисел $p$ к любому числу больше 100 можно приписать в начале одну цифру и в конце одну цифр так, чтобы полученное число делилось на $p$?
+\end{block}
+
+\textit{Ответ:} 2, 3, 5, 7, 11, 13, 17.
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.}
+\begin{proposition} Для любого простого числа $p\geqslant 97$ найдётся такое число $X\geqslant100$ такое, что к $X$ нельзя приписать по одной цифре слева и справа так, чтобы полученное число делилось на $p$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.}
+\begin{proposition} Для любого простого числа $p\in\{$19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89$\}$ найдётся такое число $X\geqslant100$ такое, что к $X$ нельзя приписать по одной цифре слева и справа так, чтобы полученное число делилось на $p$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.}
+\begin{proposition} Для любого простого числа $p\in\{$2, 3, 5, 7, 11, 13, 17$\}$ и для любого натурального $X\geqslant100$ найдутся такие цифры, такие, что если к $X$ их приписать слева и справа, то полученное число будет делится на $p$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.\quad {\small $\overline{xXy}=x\cdot10^k+X\cdot10+y\equiv x\cdot b+r+y\pmod{13}$}.}
+
+{\small
+\begin{center}
+\begin{tabular}{r|ccccccccccccc}
+{$b$/$r$}&0&1&2&3&4&5&6&7&8&9&10&11&12\\
+\hline
+1&\yl{1}&\yl{2}&\yl{3}&\bl{4}&\bl{5}&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}\\
+2&\yl{2}&\yl{3}&\bl{4}&\bl{5}&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\rd{14}\\
+3&\yl{3}&\bl{4}&\bl{5}&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}\\
+4&\bl{4}&\bl{5}&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}\\
+5&\bl{5}&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}\\
+6&\bl{6}&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}&\gr{18}\\
+7&\bl{7}&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}&\gr{18}&\gr{19}\\
+8&\bl{8}&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}&\gr{18}&\gr{19}&\gr{20}\\
+9&\bl{9}&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}&\gr{18}&\gr{19}&\gr{20}&\gr{21}\\
+10&\bl{10}&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\mg{16}&\gr{17}&\gr{18}&\gr{19}&\gr{20}&\gr{21}&\gr{22}\\
+11&\bl{11}&\bl{12}&\bl{13}&\mg{14}&\mg{15}&\rd{16}&\gr{17}&\gr{18}&\gr{19}&\gr{20}&\gr{21}&\gr{22}&\gr{23}\\
+12&\bl{12}&\bl{13}&\mg{14}&\rd{15}&\rd{16}&\gr{17}&\gr{18}&\gr{19}&\gr{20}&\gr{21}&\gr{22}&\gr{23}&\gr{24}\\
+\end{tabular}
+\end{center}
+}
+
+\begin{center}\begin{tabular}{ll}
+\bl{$x=1$, $y=13-(r+b)$}&\gr{$x=1$, $y=26-(r+b)$}\\ 
+\yl{$x=4$, $y=13-(r+4b)$}&\mg{$x=2$, $y=26-(r+2b)$}\\
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{Пункт 6.}
+\begin{center}
+\rd{для каждого красного числа свои значения $x$ и $y$\footnote{ну Вы поняли... опять опечатки}}.
+
+\begin{tabular}{cccc}
+$b$&$r$&$x$&$y$\\
+\hline
+2&12&3&8\\
+11&5&3&1\\
+12&3&3&0\\
+12&4&4&0
+\end{tabular}
+\end{center}
+\end{frame}
+\end{document}
