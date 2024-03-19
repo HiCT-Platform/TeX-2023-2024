@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{geometry}
+\title{\bfseries Домашняя работа \textnumero 7 по курсу \TeX'а}
+\author{Филиппова Владимира}
+\date{\today}
+\input{jensen.tex}
+\begin{document}
+  \maketitle
+  \input{jensen.tex}  
+  \section{Круги Эйлера}
+\begin{tikzpicture}
+  \node [circle,
+  fill=red!50,
+  minimum size =3cm,
+  label={135:$A$}] (A) at (0,0){};
+  \node [circle,
+  fill=red!50,
+  minimum size =3cm,
+  label={45:$B$}] (B) at (1.8,0){};
+  \node[orange!90!black] at (0.9,1.8) {($A\cup B$)$\setminus$ (A $\cap$ C)};
+\end{tikzpicture}
+\end{document}
