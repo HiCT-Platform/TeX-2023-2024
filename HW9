@@ -11,7 +11,7 @@
   \expandafter\newcommand\csname #2*\endcsname{\mathfrak{#2}}
   \ifx\relax#1\relax
   \else
-    \expandafter\newcommand\csname #2\endcsname{#1}%
+    \expandafter\newcommand\csname #2\endcsname{#1}
   \fi
 }
 \makeatother
