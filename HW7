@@ -1,0 +1,84 @@
+\documentclass[14pt]{article}
+\usepackage[utf8x]{inputenc} 
+\usepackage[left=2.5cm, top=2cm, right=2.5cm, bottom=20mm, nohead, nofoot]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage{amsfonts}
+\usepackage[bb=esstix]{mathalpha}
+\usepackage[russian]{babel}
+\usepackage{tikz}%
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{pstricks,pst-node}
+\newtheorem{theorem}{ТЕОРЕМА }
+\newtheorem{lemma}{ЛЕММА. }
+\usepackage[varbb]{newpxmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+
+\title{\bfseries Домашняя работа \textnumero 7 по курсу \TeX'а}
+\author{<Поповой Варвары Павловны>}
+\date{\today}
+\begin{document} 
+
+\begin{titlepage}
+    \Large\centering
+
+    \maketitle
+
+    \vspace{5cm}
+
+    \tableofcontents
+
+    \vfill
+\end{titlepage}
+
+
+	\color{black}
+\newpage
+\section{Hеравенство Йенсена}
+
+	 \textbf{Theorem 1.1} (Неравенство Йенсена). Пусть $f(x)$ выпукла вверх на $[a, b]$. Тогда $\forall x_{1}, \ldots, x_{n} \in[a, b] u$ их выпуклой комбинации выполнено неравенство $\sum_{k=1}^{n} \alpha_{k} f\left(x_{k}\right) \leqslant f\left(\sum_{k=1}^{n} \alpha_{k} x_{k}\right)$\\
+
+
+
+\noindent Доказательство. (Докажем по индукции)\\
+
+\noindent\textbf{База:} $n=2$.
+
+\indentНеравенство превращается в определение выпуклой вверх функции, для которой это,очевидно,выполняется.\\ 
+
+
+\noindent\textbf{Переход:} Пусть это верно для $n$. Докажем, что это верно для $n+1$ :
+
+$$
+\sum_{k=1}^{n+1} \alpha_{k}=1, \text { обозначим за } s_{n}=\sum_{k=1}^{n} \alpha_{k}
+$$
+
+Пусть $\beta_{k}=\frac{\alpha_{k}}{s_{n}}$. Тогда получаем: $\sum_{k=1}^{n} \beta_{k}=1$.
+
+$$
+\begin{aligned}
+& \sum_{k=1}^{n+1} \alpha_{k} f\left(x_{k}\right)= s_{n} \sum_{k=1}^{n} \beta_{k} f\left(x_{k}\right)+\alpha_{n+1} f\left(x_{n+1}\right) \leqslant \\
+& ~~~~~~~~~~~~~~~~~~~\leqslant(\text { по предположению индукции }) s_{n} f\left(\sum_{k=1}^{n} \beta_{k} x_{k}\right)+\alpha_{n+1} f\left(x_{n+1}\right) \leqslant \\
+ & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\leqslant\left(\text { так как } s_{n}+\alpha_{n+1}=1\right) f\left(\sum_{k=1}^{n+1} \alpha_{k} x_{k}\right)
+\end{aligned}
+$$
+
+Значит, шаг индукции проделан, неравенство доказано для произвольного $\mathrm{n}$.\\\\
+	
+\section{Круги эйлера}
+\linespread{2.0}\large{\color{red}\[(A \cup B) \setminus (A \cap B)\]}
+
+
+
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Picture.png}
+    \caption{Симметрическая разность }
+    \label{fig:enter-label}
+\end{figure}
+
+\end{document}
