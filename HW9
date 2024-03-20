@@ -19,7 +19,7 @@
 \newset{A}
 
 \begin{document}
-
+\Huge
 $\mathbb{A}$, $\mathfrak{A}$
 
 $A$, $A*$
