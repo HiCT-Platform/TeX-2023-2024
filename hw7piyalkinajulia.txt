@@ -1,0 +1,87 @@
+\documentclass[14pt]{article}
+\usepackage[utf8x]{inputenc} 
+\usepackage[left=2.5cm, top=2cm, right=2.5cm, bottom=20mm, nohead, nofoot]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}%
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{pstricks,pst-node}
+\newtheorem{theorem}{ТЕОРЕМА }
+\newtheorem{lemma}{ЛЕММА. }
+\usepackage[varbb]{newpxmath}
+\usepackage{amsfonts}
+\usepackage[bb=esstix]{mathalpha}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+
+\title{\bfseries Домашняя работа №7 по курсу \TeX'а}
+\author{Юля Пиялкина}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+	\tableofcontents 
+	\newpage
+ \section{Неравенство Йенсена}
+
+
+
+\\  \textbf{Theorem 1.1} Пусть f(x) выпукла вверх на [a,b]. Тогда $\forall x_{1}$, ..., $x_{n} \in [a,b]$ и их выпуклой комбинации выполнено неравенство $\sum^{n}_{k = 1} \alpha_{k} f(x_{k}) \leqslant f(\sum^{n}_{k = 1} \alpha_{k}x_{k})$ 
+\newline
+
+Доказательство. (Докажем по индукции)
+
+\vspace{1cm}
+
+\\ \textbf{База:} n = 2
+
+\\~~~~~Неравенство превращается в определение выпуклой вверх функции, для которой это, очевидно, выполняется.
+
+\\\textbf{Переход:} Пусть это верно для n. Докажем, что это верно для n + 1:
+\begin{displaymath}
+  {\sum\limits^{n+1}_{k = 1}\alpha_{k} = 1, обозначим за s_{n} = \sum\limits^{n}_{k = 1}\alpha_{k}}}
+\end{displaymath}
+
+\\ Пусть $\beta_{k} = \frac{\alpha_{k}}{s_{n}}$. Тогда получаем: $\sum^{n}_{k = 1}\beta_{k}=1$.
+
+~~~~~{\sum\limits^{n+1}_{k = 1}\alpha_{k}f(x_{k}) = обозначим за s_{n}\sum\limits^{n}_{k = 1}\beta_{k}f(x_{k})+\alpha_{n+1}f(x_{n}+1) \leqslant}}
+
+\vspace{0.5cm}
+
+\\$~~~~~~~~~~~~~~~~~~~~~~~\leqslant($по предположению индукции$) s_{n}f  ({\sum\limits^{n}_{k = 1}\beta_{k}x_{k}) + \alpha_{n+1}f(x_{n+1}) \leqslant$
+
+\vspace{0.5cm}
+
+\\$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\leqslant ($так как$ s_{n} + \alpha_{n+1} = 1)f({\sum\limits^{n+1}_{k = 1}\alpha_{k}x_{k})
+
+\\Значит, шаг индукции проделан, неравенство доказано для произвольного n.
+
+
+\section{Круги Эйлера}
+
+\textcolor{red}{$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(A \cup B) \backslash (A \cap B)$}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{picturetex.jpg}
+  \caption{A boat.}
+  \label{fig:boat1}
+\end{figure}
+
+
+
+\end{document}
+
+
+%!!!я вроде вставила код для вставки киртинки, но она не вставляется =(
