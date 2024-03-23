@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb} 
+
+\title{\bfseries Домашняя работа \textnumero 7 по курсу \TeX'а}
+\author{<Поповой Варвары Павловны>}
+\date{\today}
+
+\makeatletter
+\newcommand{\newset}[2][]{
+  \expandafter\newcommand\csname #2\endcsname{\mathbb{#2}}
+  \expandafter\newcommand\csname #2*\endcsname{\mathfrak{#2}}
+  \ifx\relax#1\relax
+  \else
+    \expandafter\newcommand\csname #2\endcsname{#1}
+  \fi
+}
+\makeatother
+
+\newset{A}
+
+\begin{document}
+\Huge
+$\mathbb{A}$, $\mathfrak{A}$
+
+$A$, $A*$
+
+
+\end{document}
