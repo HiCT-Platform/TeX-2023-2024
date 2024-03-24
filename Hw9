@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\fi
+
+\usepackage{enumitem}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\geometry{
+  left=20mm,
+  right=15mm,
+  top=25mm,
+  bottom=30mm
+}
+\newcommand{\newset}[2][]{\ifx\relax#1\relax
+     \expandafter\gdef\csname #2\endcsname{\ensuremath{\mathbb{#2}}}
+     \expandafter\gdef\csname #2*\endcsname{\ensuremath{\mathfrak{#2}}}
+\else
+     \expandafter\gdef\csname #2\endcsname{#1}
+\fi}
+
+
+\begin{document}
+\thispagestyle{empty}
+  \fontsize{14}{16}\selectfont
+  \begin{center}
+    \textbf{Домашняя работа №9 по курсу \TeX'a}
+  \end{center}
+  \hspace{20px}
+  \begin{center}
+    Морозов Данила Егорович
+  \end{center}
+  \hspace{20px}
+  \begin{center}
+    19 марта 2024 г.
+  \end{center}
+  \hspace{100px}
+\hline{}
+\vspace{15mm}
+
+\newset{R}
+\newset{C}
+
+$\mathbb{R}, \mathfrak{R}, \mathbb{C}$
+\end{document}
