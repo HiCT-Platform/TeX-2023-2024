@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{imports}
+\input{uspachw8.tex}
+\title{\bfseries Домашняя работа \textnumero 7 по курсу \TeX'а}
+\author{Филиппов Владмир}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{figure}[ht!]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.7\linewidth]{image.png}
+\caption{птица}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{asy}
+size(5cm);
+path thebox = box((0,0),(1,1));
+fill(thebox, blue);
+draw(shift(.5,.5)*thebox,green+linewidth(5pt));
+clip(thebox);
+draw(shift(-.5,-.5)*thebox,red+linewidth(5pt));
+\end{asy}
+\caption{квадратики}
+\end{minipage}
+\end{figure}
+\end{document}
